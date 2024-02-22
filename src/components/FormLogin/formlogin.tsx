@@ -8,11 +8,13 @@ export const FormLogin = () => {
                 <h2>Log in</h2>
 
                 <Input 
+                    label="E-mail"
                     type="email"
                     placeholder="Enter your e-mail"
                 />
 
                 <Input 
+                    label="Password"
                     type="password"
                     placeholder="Enter your password"
                 />
