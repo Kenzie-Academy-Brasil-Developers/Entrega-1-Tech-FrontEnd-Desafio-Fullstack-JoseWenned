@@ -6,39 +6,43 @@ export const FormRegister = () => {
         <>
             <div>
                 
-                <h2>Register</h2>
+                <form>
 
-                <Input 
-                    label="Complete name"
-                    type="name"
-                    placeholder="Enter your full name"
-                />
+                    <h2>Register</h2>
 
-                <Input 
-                    label="E-mail"
-                    type="email"
-                    placeholder="Enter your e-mail"
-                />
+                    <Input 
+                        label="Complete name"
+                        type="name"
+                        placeholder="Enter your full name"
+                    />
 
-                <Input 
-                    label="Password"
-                    type="password"
-                    placeholder="Enter your password"
-                />
+                    <Input 
+                        label="E-mail"
+                        type="email"
+                        placeholder="Enter your e-mail"
+                    />
 
-                <Input 
-                    label="Telephone"
-                    type="string"
-                    placeholder="(--)- ---- ----"
-                />
+                    <Input 
+                        label="Password"
+                        type="password"
+                        placeholder="Enter your password"
+                    />
 
-                <Input 
-                    label="Registration date"
-                    type="string"
-                    placeholder="--/--/----"
-                />
+                    <Input 
+                        label="Telephone"
+                        type="string"
+                        placeholder="(--)- ---- ----"
+                    />
 
-                <Button type="submit">Register</Button>
+                    <Input 
+                        label="Registration date"
+                        type="string"
+                        placeholder="--/--/----"
+                    />
+
+                    <Button type="submit">Register</Button>
+
+                </form>
 
             </div>
         </>

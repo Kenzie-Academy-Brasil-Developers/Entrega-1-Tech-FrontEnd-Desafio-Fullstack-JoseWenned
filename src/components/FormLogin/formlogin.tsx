@@ -5,22 +5,28 @@ export const FormLogin = () => {
     return(
         <>
             <div>
-                <h2>Log in</h2>
+                
+                <form>
 
-                <Input 
-                    label="E-mail"
-                    type="email"
-                    placeholder="Enter your e-mail"
-                />
+                    <h2>Log in</h2>
 
-                <Input 
-                    label="Password"
-                    type="password"
-                    placeholder="Enter your password"
-                />
+                    <Input 
+                        label="E-mail"
+                        type="email"
+                        placeholder="Enter your e-mail"
+                    />
 
-                <Button type="submit">Sing in</Button>
-                <Button type="submit">Register</Button>
+                    <Input 
+                        label="Password"
+                        type="password"
+                        placeholder="Enter your password"
+                    />
+
+                    <Button type="submit">Sing in</Button>
+                    <Button type="submit">Register</Button>
+
+                </form>
+
             </div>
         </>
     )
