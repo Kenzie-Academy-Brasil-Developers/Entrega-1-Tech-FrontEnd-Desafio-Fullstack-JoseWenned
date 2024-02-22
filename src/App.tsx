@@ -1,10 +1,11 @@
 import './App.css'
+import { LoginPage } from './pages/LoginPage/loginPage'
 
 export const App = () => {
     return(
         <>
             <main>
-                <h1>App</h1>
+                <LoginPage/>
             </main>
         </>
     )

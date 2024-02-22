@@ -1,24 +1,12 @@
+import { FormLogin } from "../../components/FormLogin/formlogin"
+
 export const LoginPage = () => {
     return(
         <>
             <div>
 
-                <header>
-
-                    <div>
-
-                    </div>
-
-                </header>
-
-                <section>
-
-                    <div>
-
-                    </div>
-
-                </section>
-                
+                <FormLogin/>
+        
             </div>
         </>
     )
