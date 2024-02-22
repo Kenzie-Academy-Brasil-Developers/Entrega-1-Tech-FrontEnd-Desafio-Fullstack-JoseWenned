@@ -1,7 +1,7 @@
-import { forwardRef, InputHTMLAttributes } from "react"; 
-import { FieldError } from "react-hook-form"; 
+import { forwardRef } from "react"; 
+import { IInputProps } from "../../interfaces/fragment.interface";
 
-export const Input = forwardRef<HTMLInputElement>(
+export const Input = forwardRef<HTMLInputElement, IInputProps>(
     ( { label, error, ...rest }, ref ) => {
         return(
             <>
