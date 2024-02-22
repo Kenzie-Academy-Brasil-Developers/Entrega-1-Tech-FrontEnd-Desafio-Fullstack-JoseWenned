@@ -1,14 +1,20 @@
+import { Input } from "../../fragments/Input/input"
+
 export const FormLogin = () => {
     return(
         <>
             <div>
                 <h2>Log in</h2>
 
-                <label>E-mail</label>
-                <input type="email" placeholder="Enter your e-mail." required/>
+                <Input 
+                    type="email"
+                    placeholder="Enter your e-mail"
+                />
 
-                <label>Password</label>
-                <input type="email" placeholder="Enter your password." required/>
+                <Input 
+                    type="password"
+                    placeholder="Enter your password"
+                />
 
                 <button type="submit">Sing in</button>
                 <button type="submit">Register</button>
