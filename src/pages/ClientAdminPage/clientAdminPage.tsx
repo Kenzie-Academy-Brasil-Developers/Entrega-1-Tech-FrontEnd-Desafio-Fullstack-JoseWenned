@@ -1,4 +1,4 @@
-export const UserAdminPage = () => {
+export const ClientAdminPage = () => {
     return(
         <>
             <div>
