@@ -1,14 +1,18 @@
 import { forwardRef } from "react" 
+import { IButtonProps } from "../../interfaces/fragment.interface"
 
-export const Button = forwardRef<HTMLButtonElement> ( { props, ref } ) => {
+export const Button = forwardRef<HTMLButtonElement, IButtonProps> ((props, ref) => {
 
-    const { type, onClick, childen, ...rest} = props
+    const { type, onClick, children, ...rest} = props
 
     return(
+
         <>
             <button type={type} onClick={onClick} ref={ref} {...rest}>
-                { childen }
+                { children }
             </button>
         </>
+        
     )
-}
+
+})
