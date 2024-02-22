@@ -1,3 +1,4 @@
+import { Button } from "../../fragments/Button/button"
 import { Input } from "../../fragments/Input/input"
 
 export const FormLogin = () => {
@@ -16,8 +17,8 @@ export const FormLogin = () => {
                     placeholder="Enter your password"
                 />
 
-                <button type="submit">Sing in</button>
-                <button type="submit">Register</button>
+                <Button type="submit">Sing in</Button>
+                <Button type="submit">Register</Button>
             </div>
         </>
     )
