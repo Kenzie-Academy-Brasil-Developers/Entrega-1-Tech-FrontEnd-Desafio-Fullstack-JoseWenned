@@ -1,21 +1,21 @@
+import { FormLogin } from "../../components/FormLogin/formlogin"
+
 export const LoginPage = () => {
     return(
         <>
             <div>
 
-                <header>
+                <section>
 
-                    <div>
-
-                    </div>
-
-                </header>
+                    <h1>Welcome</h1>
+                    <p>to the full stack</p>
+                    <p>tech challenge</p>
+                    
+                </section>
 
                 <section>
 
-                    <div>
-
-                    </div>
+                    <FormLogin/>
 
                 </section>
                 
