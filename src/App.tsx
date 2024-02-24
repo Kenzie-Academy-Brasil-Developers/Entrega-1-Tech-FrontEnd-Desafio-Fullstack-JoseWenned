@@ -1,11 +1,11 @@
 import './App.css'
-import { LoginPage } from './pages/LoginPage/loginPage'
+import { RouterMain } from './routers/routerMain'
 
 export const App = () => {
     return(
         <>
             <main>
-                <LoginPage/>
+                <RouterMain/>
             </main>
         </>
     )

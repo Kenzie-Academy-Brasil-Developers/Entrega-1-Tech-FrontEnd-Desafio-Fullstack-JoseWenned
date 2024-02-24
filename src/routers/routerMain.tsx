@@ -10,11 +10,11 @@ export const RouterMain = () => {
 
         <Routes>
 
-            <Route path="/loginPage" element={ <LoginPage/> }></Route>
-            <Route path="/registerClientPage" element={ <RegisterClientPage/> }></Route>
-            <Route path="/registerContactPage" element={ <RegisterContactPage/> }></Route>
-            <Route path="/clientAdminPage" element={ <ClientAdminPage/> }></Route>
-            <Route path="/pageAllContacts" element={ <ContactsAllPage/> }></Route>
+            <Route path="/LoginPage" element={ <LoginPage/> }></Route>
+            <Route path="/RegisterClientPage" element={ <RegisterClientPage/> }></Route>
+            <Route path="/RegisterContactPage" element={ <RegisterContactPage/> }></Route>
+            <Route path="/ClientAdminPage" element={ <ClientAdminPage/> }></Route>
+            <Route path="/PageAllContacts" element={ <ContactsAllPage/> }></Route>
 
         </Routes>
 
