@@ -5,8 +5,20 @@ export const LoginPage = () => {
         <>
             <div>
 
-                <FormLogin/>
-        
+                <section>
+
+                    <h1>Welcome</h1>
+                    <p>to the full stack</p>
+                    <p>tech challenge</p>
+                    
+                </section>
+
+                <section>
+
+                    <FormLogin/>
+
+                </section>
+                
             </div>
         </>
     )
