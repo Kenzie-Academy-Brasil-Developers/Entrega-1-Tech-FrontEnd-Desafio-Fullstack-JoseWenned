@@ -28,6 +28,12 @@ export const FormRegisterClient = () => {
                         placeholder="Enter your password"
                     />
 
+                    <Input 
+                        label="ConfirmPassword"
+                        type="string"
+                        placeholder="Confirm your password"
+                    />
+
                     <label htmlFor="accountType">Select account type:</label>
                     <select id="accountType" name="Account type">
                         <option value={"clientAdmin"}>Client admin</option>
