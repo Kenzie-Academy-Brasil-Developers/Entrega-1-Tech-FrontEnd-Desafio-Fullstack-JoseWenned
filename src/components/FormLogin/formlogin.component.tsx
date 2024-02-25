@@ -3,9 +3,8 @@ import { Input } from "../../fragments/Input/input.component"
 import { useContext, useEffect } from "react"
 import { UserContext } from "../../providers/ClientContext/ClientContext.context"
 import { useNavigate } from "react-router-dom"
-import { FormLoginSchema } from "../../schemas/formLogin.schema"
-import { useForm } from "react-hook-form"
-import { ZodObject, ZodEffects, ZodString, ZodTypeAny } from "zod"
+import { FormLoginSchema, TLoginFormValues, zodResolver } from "../../schemas/formLogin.schema"
+import { FieldError, useForm } from "react-hook-form"
 
 export const FormLogin = () => {
 
@@ -17,9 +16,9 @@ export const FormLogin = () => {
         register, 
         handleSubmit, 
         reset, 
-        formState: { errors } } = useForm({
-            resolver: ZodResolver( FormLoginSchema )
-    })
+        formState: { errors } } = useForm<TLoginFormValues>({
+            resolver: zodResolver( FormLoginSchema )
+        })
 
     useEffect(() => {
 
@@ -79,21 +78,19 @@ export const FormLogin = () => {
 
                     <h2>Log in</h2>
 
-                    <Input 
-                        register={undefined} label="E-mail"
+                    <Input
                         type="email"
-                        placeholder="Enter your e-mail"
+                        placeholder="E-mail"
                         {...register("email")}
-                        error={errors.password}                    
+                        error={ errors.email as FieldError | undefined }
                     />
                     
+                    <Input
 
-                    <Input 
-                        register={undefined} label="Password"
                         type="password"
-                        placeholder="Enter your password"
+                        placeholder="Senha"
                         {...register("password")}
-                        error={errors.password}                    
+                        error={ errors.password as FieldError | undefined } 
                     />
 
                     <Button type="submit">Sing in</Button>
@@ -106,7 +103,5 @@ export const FormLogin = () => {
     )
 }
 
-function ZodResolver(FormLoginSchema: ZodObject<{ email: ZodEffects<ZodString, string, string>; password: ZodEffects<ZodString, string, string> }, "strip", ZodTypeAny, { email: string; password: string }, { email: string; password: string }>): import("react-hook-form").Resolver<import("react-hook-form").FieldValues, any> | undefined {
-    throw new Error("Function not implemented.")
-}
+
 

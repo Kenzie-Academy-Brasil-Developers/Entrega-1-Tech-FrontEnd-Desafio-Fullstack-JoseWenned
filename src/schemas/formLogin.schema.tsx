@@ -1,4 +1,4 @@
-import { z } from "zod"
+import { ZodEffects, ZodObject, ZodString, ZodTypeAny, z } from "zod"
 
 export const FormLoginSchema = z.object({
     
@@ -19,3 +19,8 @@ export const FormLoginSchema = z.object({
 })
 
 export type TLoginFormValues = z.infer<typeof FormLoginSchema>
+
+export function zodResolver(FormLoginSchema: ZodObject<{ email: ZodEffects<ZodString, string, string>; password: ZodEffects<ZodString, string, string> }, "strip", ZodTypeAny, { email: string; password: string }, { email: string; password: string }>): import("react-hook-form").Resolver<{ email: string; password: string }, any> | undefined {
+    throw new Error("Function not implemented.")
+}
+
