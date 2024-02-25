@@ -4,7 +4,6 @@ export const RegisterClientPage = () => {
     return(
         <>
             <div>
-                
 
                 <section>
 
