@@ -1,7 +1,7 @@
 import { Button } from "../../fragments/Button/button"
 import { Input } from "../../fragments/Input/input"
 
-export const FormRegisterClient = () => {
+export const FormRegisterContact = () => {
     return(
         <>
             <div>
