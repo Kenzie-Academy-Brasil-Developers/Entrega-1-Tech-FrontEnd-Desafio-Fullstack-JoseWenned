@@ -1,3 +1,5 @@
+import { FormRegisterClient } from "../../components/FormClientRegister/formClientRegister"
+
 export const RegisterClientPage = () => {
     return(
         <>
@@ -7,15 +9,19 @@ export const RegisterClientPage = () => {
 
                     <div>
 
+                        <h1>TECH</h1>
+
+                        <div>
+                            full stack challenge
+                        </div>
+
                     </div>
 
                 </header>
 
                 <section>
 
-                    <div>
-
-                    </div>
+                    <FormRegisterClient/>
 
                 </section>
                 

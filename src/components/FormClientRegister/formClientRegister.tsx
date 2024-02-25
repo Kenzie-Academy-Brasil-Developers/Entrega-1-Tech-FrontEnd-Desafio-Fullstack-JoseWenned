@@ -1,7 +1,7 @@
 import { Button } from "../../fragments/Button/button"
 import { Input } from "../../fragments/Input/input"
 
-export const FormRegister = () => {
+export const FormRegisterClient = () => {
     return(
         <>
             <div>
@@ -26,6 +26,12 @@ export const FormRegister = () => {
                         label="Password"
                         type="password"
                         placeholder="Enter your password"
+                    />
+
+                    <Input 
+                        label="ConfirmPassword"
+                        type="string"
+                        placeholder="Confirm your password"
                     />
 
                     <label htmlFor="accountType">Select account type:</label>
