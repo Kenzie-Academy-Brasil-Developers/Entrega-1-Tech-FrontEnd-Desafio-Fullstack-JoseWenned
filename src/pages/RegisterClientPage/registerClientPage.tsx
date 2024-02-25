@@ -5,20 +5,6 @@ export const RegisterClientPage = () => {
         <>
             <div>
 
-                <header>
-
-                    <div>
-
-                        <h1>TECH</h1>
-
-                        <div>
-                            full stack challenge
-                        </div>
-
-                    </div>
-
-                </header>
-
                 <section>
 
                     <FormRegisterClient/>
