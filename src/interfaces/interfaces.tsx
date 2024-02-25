@@ -13,6 +13,7 @@ export interface IUserProviderProps {
     children: React.ReactNode
 }
 
-export interface IUserContext {
+export interface IClientContext {
     client: IClient | null
+    loadClient: ( formData: {} ) => Promise<void>
 }
