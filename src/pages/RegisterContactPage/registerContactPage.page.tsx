@@ -1,4 +1,6 @@
+import { FormRegisterContact } from "../../components/FormContactRegister/formContactRegister.component"
 import { Header } from "../../components/Header/header.component"
+import { Button } from "../../fragments/Button/button.fragment"
 
 export const RegisterContactPage = () => {
     return(
@@ -11,7 +13,11 @@ export const RegisterContactPage = () => {
 
                     <div>
 
+                        <Button type="submit">Back</Button>
+
                     </div>
+
+                    <FormRegisterContact/>
 
                 </section>
                 

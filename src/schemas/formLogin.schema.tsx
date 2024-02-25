@@ -17,3 +17,5 @@ export const FormLoginSchema = z.object({
     })
 
 })
+
+export type TLoginFormValues = z.infer<typeof FormLoginSchema>
