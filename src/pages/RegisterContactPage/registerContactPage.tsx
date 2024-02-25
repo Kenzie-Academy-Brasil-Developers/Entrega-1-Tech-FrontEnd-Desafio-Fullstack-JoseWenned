@@ -1,15 +1,11 @@
+import { Header } from "../../components/Header/header.component"
+
 export const RegisterContactPage = () => {
     return(
         <>
             <div>
 
-                <header>
-
-                    <div>
-
-                    </div>
-
-                </header>
+                <Header/>
 
                 <section>
 
