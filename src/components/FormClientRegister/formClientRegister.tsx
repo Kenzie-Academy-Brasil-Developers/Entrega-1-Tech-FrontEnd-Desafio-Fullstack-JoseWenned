@@ -29,7 +29,7 @@ export const FormRegisterClient = () => {
                     />
 
                     <Input 
-                        label="ConfirmPassword"
+                        label="Confirm password"
                         type="string"
                         placeholder="Confirm your password"
                     />
