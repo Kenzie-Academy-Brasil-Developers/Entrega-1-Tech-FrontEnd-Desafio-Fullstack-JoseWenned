@@ -1,10 +1,7 @@
+import { InputHTMLAttributes } from "react";
+import { FieldError } from "react-hook-form";
 
-export interface InputProps {
-    label: string
-    type: string
-    name: string
-    placeholder: string
-    register: any
-    error: any
-}
- 
+export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
+    label?: string;
+    error?: FieldError;
+  }
