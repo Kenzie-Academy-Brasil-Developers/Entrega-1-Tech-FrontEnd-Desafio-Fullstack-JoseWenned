@@ -22,7 +22,7 @@ export const formRegisterSchema = z.object({
     confirmPassword: z.string().refine((confirmPassword) => confirmPassword.length === 0, {
         message: "Confirm password is required."
     }),
-    admin: z.boolean().refine((admin) => admin === null {
+    admin: z.boolean().refine((admin) => admin === null, {
         message: "Admin is required."
     }),
     telephone: z.string()
