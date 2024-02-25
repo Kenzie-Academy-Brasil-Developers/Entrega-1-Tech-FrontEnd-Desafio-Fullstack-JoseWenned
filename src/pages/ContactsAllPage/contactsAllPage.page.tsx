@@ -1,8 +1,7 @@
-import { FormRegisterContact } from "../../components/FormContactRegister/formContactRegister.component"
 import { Header } from "../../components/Header/header.component"
-import { Button } from "../../fragments/Button/button"
+import { Button } from "../../fragments/Button/button.fragment"
 
-export const RegisterContactPage = () => {
+export const ContactsAllPage = () => {
     return(
         <>
             <div>
@@ -15,9 +14,13 @@ export const RegisterContactPage = () => {
 
                         <Button type="submit">Back</Button>
 
+                        <Button type="submit">New contact</Button>
+
                     </div>
 
-                    <FormRegisterContact/>
+                    <div>
+
+                    </div>
 
                 </section>
                 

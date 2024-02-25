@@ -1,8 +1,11 @@
+import { FormRegisterClient } from "../../components/FormClientRegister/formClientRegister.component"
 import { Header } from "../../components/Header/header.component"
-import { Button } from "../../fragments/Button/button"
+import { Button } from "../../fragments/Button/button.fragment"
 
-export const ContactsAllPage = () => {
+export const RegisterClientPage = () => {
+
     return(
+
         <>
             <div>
 
@@ -14,17 +17,15 @@ export const ContactsAllPage = () => {
 
                         <Button type="submit">Back</Button>
 
-                        <Button type="submit">New contact</Button>
-
                     </div>
 
-                    <div>
-
-                    </div>
+                    <FormRegisterClient/>
 
                 </section>
                 
             </div>
         </>
+
     )
+    
 }
