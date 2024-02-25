@@ -1,5 +1,6 @@
 import { FormRegisterClient } from "../../components/FormClientRegister/formClientRegister"
 import { Header } from "../../components/Header/header.component"
+import { Button } from "../../fragments/Button/button"
 
 export const RegisterClientPage = () => {
 
@@ -11,6 +12,12 @@ export const RegisterClientPage = () => {
                 <Header/>
 
                 <section>
+
+                    <div>
+
+                        <Button type="submit">Back</Button>
+
+                    </div>
 
                     <FormRegisterClient/>
 
