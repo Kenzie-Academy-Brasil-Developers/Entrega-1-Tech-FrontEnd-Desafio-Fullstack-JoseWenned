@@ -1,4 +1,5 @@
 import { Header } from "../../components/Header/header.component"
+import { Button } from "../../fragments/Button/button"
 
 export const ContactsAllPage = () => {
     return(
@@ -8,6 +9,14 @@ export const ContactsAllPage = () => {
                 <Header/>
 
                 <section>
+
+                    <div>
+
+                        <Button type="submit">Back</Button>
+
+                        <Button type="submit">New contact</Button>
+
+                    </div>
 
                     <div>
 
