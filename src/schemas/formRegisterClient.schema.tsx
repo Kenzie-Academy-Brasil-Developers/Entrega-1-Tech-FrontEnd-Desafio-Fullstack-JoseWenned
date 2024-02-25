@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-export const formRegisterSchema = z.object({
+export const formClientRegisterSchema = z.object({
     full_name: z.string()
     .min(3, "The full name must have at least three characters.")
     .refine(( full_name ) => full_name.length === 0, {
