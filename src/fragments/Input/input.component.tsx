@@ -1,28 +1,26 @@
-import { forwardRef } from "react"; 
+import React, { forwardRef } from "react"; 
 import { IInputProps } from "../../interfaces/fragment.interface";
+import { InputProps } from "../../interfaces/input.interface";
 
-export const Input = forwardRef<HTMLInputElement, IInputProps>(
-    ( { label, error, ...rest }, ref ) => {
-        return(
-            <>
-                <div>
+export const Input:React.FC<InputProps> = ( { label, error, type, register }, ref ) => {
 
-                    {label ? <label htmlFor={rest.name}>{label}</label>: null}
+    return(
+        <>
+            <div>
 
-                    <input 
-                        id={rest.name}
-                        name={rest.name}
-                        ref={ref}
-                        type="text"
-                        {...rest}
-                    />
+                <label>{label}</label>
 
-                    {error ? (
-                        <p>{error.message}</p>
-                    ): null}
+                <input
+                    {...register}
+                    ref={ref}
+                    type= {type}
+                />
 
-                </div>
-            </>
-        )
-    }
-)
+                {error ? (
+                    <p>{error.message}</p>
+                ): null}
+
+            </div>
+        </>
+    )
+}
