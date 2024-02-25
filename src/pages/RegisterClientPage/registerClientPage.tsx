@@ -4,20 +4,7 @@ export const RegisterClientPage = () => {
     return(
         <>
             <div>
-
-                <header>
-
-                    <div>
-
-                        <h1>TECH</h1>
-
-                        <div>
-                            full stack challenge
-                        </div>
-
-                    </div>
-
-                </header>
+                
 
                 <section>
 
