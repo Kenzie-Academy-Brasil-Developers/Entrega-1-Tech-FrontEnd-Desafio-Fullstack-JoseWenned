@@ -1,11 +1,9 @@
-import { FormRegisterClient } from "../../components/FormClientRegister/formClientRegister"
+import { FormRegisterContact } from "../../components/FormContactRegister/formContactRegister.component"
 import { Header } from "../../components/Header/header.component"
-import { Button } from "../../fragments/Button/button"
+import { Button } from "../../fragments/Button/button.fragment"
 
-export const RegisterClientPage = () => {
-
+export const RegisterContactPage = () => {
     return(
-
         <>
             <div>
 
@@ -19,13 +17,11 @@ export const RegisterClientPage = () => {
 
                     </div>
 
-                    <FormRegisterClient/>
+                    <FormRegisterContact/>
 
                 </section>
                 
             </div>
         </>
-
     )
-    
 }

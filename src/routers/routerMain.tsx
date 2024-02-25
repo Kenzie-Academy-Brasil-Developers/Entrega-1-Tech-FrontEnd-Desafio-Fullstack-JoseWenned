@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom"
-import { LoginPage } from "../pages/LoginPage/loginPage"
-import { RegisterClientPage } from "../pages/RegisterClientPage/registerClientPage"
-import { RegisterContactPage } from "../pages/RegisterContactPage/registerContactPage"
-import { ClientAdminPage } from "../pages/ClientAdminPage/clientAdminPage"
-import { ContactsAllPage } from "../pages/ContactsAllPage/contactsAllPage"
+import { LoginPage } from "../pages/LoginPage/loginPage.page"
+import { RegisterClientPage } from "../pages/RegisterClientPage/registerClientPage.page"
+import { RegisterContactPage } from "../pages/RegisterContactPage/registerContactPage.page"
+import { ClientAdminPage } from "../pages/ClientAdminPage/clientAdminPage.page"
+import { ContactsAllPage } from "../pages/ContactsAllPage/contactsAllPage.page"
 
 export const RouterMain = () => {
     return(
