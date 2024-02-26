@@ -16,7 +16,8 @@ export const FormLogin = () => {
         register, 
         handleSubmit, 
         reset, 
-        formState: { errors } } = useForm<TLoginFormValues>({
+        formState: { errors }, 
+        } = useForm<TLoginFormValues>({
             resolver: zodResolver( FormLoginSchema )
         })
 
@@ -64,7 +65,7 @@ export const FormLogin = () => {
 
     }
 
-    const submit = ( formData: any ) => {
+    const submit = async ( formData: TLoginFormValues ) => {
         loadClient( formData )
         reset()
     }

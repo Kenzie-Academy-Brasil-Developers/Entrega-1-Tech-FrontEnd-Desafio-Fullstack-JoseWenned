@@ -1,3 +1,4 @@
+import { Resolver, ResolverResult } from "react-hook-form";
 import { ZodEffects, ZodObject, ZodString, ZodTypeAny, z } from "zod"
 
 export const FormLoginSchema = z.object({
@@ -20,7 +21,31 @@ export const FormLoginSchema = z.object({
 
 export type TLoginFormValues = z.infer<typeof FormLoginSchema>
 
-export function zodResolver(FormLoginSchema: ZodObject<{ email: ZodEffects<ZodString, string, string>; password: ZodEffects<ZodString, string, string> }, "strip", ZodTypeAny, { email: string; password: string }, { email: string; password: string }>): import("react-hook-form").Resolver<{ email: string; password: string }, any> | undefined {
-    throw new Error("Function not implemented.")
-}
+export function zodResolver(FormLoginSchema: ZodObject<{ email: ZodEffects<ZodString, string, string>; password: ZodEffects<ZodString, string, string> }, "strip", ZodTypeAny, { email: string; password: string }, { email: string; password: string }>): Resolver<{ email: string; password: string }, any> {
+    
+    return async (data: TLoginFormValues): Promise<ResolverResult<FormData>> => {
+        
+      try {
+       
+        await FormLoginSchema.parseAsync(data);
+        
+        return {
+            values: data,
+            errors: {}
+        };
+
+      } catch (error: any) {
+        
+        return {
+            values: data,
+            errors: {
+                [error.path[0]]: error.message,
+            }
+        };
+
+      }
+
+    };
+
+  }
 
