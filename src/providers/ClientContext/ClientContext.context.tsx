@@ -1,4 +1,4 @@
-import { createContext, useState } from "react"; 
+import { createContext, useEffect, useState } from "react"; 
 import { IClientContext, IUserProviderProps } from "../../interfaces/interfaces";
 import { Api } from "../../services/services";
 import { toast } from "react-toastify";
