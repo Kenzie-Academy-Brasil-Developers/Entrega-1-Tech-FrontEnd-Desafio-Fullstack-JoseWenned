@@ -35,3 +35,5 @@ export const formClientRegisterSchema = z.object({
         message: "Date register is required."
     }),
 })
+
+export type TRegisterClients = z.infer< typeof formClientRegisterSchema >
