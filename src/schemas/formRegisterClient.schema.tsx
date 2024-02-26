@@ -1,6 +1,7 @@
-import { z } from "zod"
+import { Resolver, ResolverResult } from "react-hook-form";
+import { ZodBoolean, ZodEffects, ZodError, ZodObject, ZodString, ZodType, z } from "zod"
 
-export const formClientRegisterSchema = z.object({
+export const FormClientRegisterSchema = z.object({
     full_name: z.string()
     .min(3, "The full name must have at least three characters.")
     .refine(( full_name ) => full_name.length === 0, {
@@ -22,7 +23,7 @@ export const formClientRegisterSchema = z.object({
     confirmPassword: z.string().refine((confirmPassword) => confirmPassword.length === 0, {
         message: "Confirm password is required."
     }),
-    admin: z.boolean().refine((admin) => admin === null, {
+    typeAccount: z.boolean().refine((admin) => admin === null, {
         message: "Admin is required."
     }),
     telephone: z.string()
@@ -34,6 +35,13 @@ export const formClientRegisterSchema = z.object({
     .refine((telephone) => telephone.length === 0, {
         message: "Date register is required."
     }),
-})
+}).refine(
+    ({ password, confirmPassword }) => password === confirmPassword, {
+        message: "password do not match.",
+        path: [ "confirmPassword" ]
+    }
+)
 
-export type TRegisterClients = z.infer< typeof formClientRegisterSchema >
+export type TRegisterClients = z.infer< typeof FormClientRegisterSchema >
+
+
