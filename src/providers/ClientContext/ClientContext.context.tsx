@@ -58,11 +58,19 @@ export const UserProvider = ({ children }: IUserProviderProps) => {
 
     }
 
+    const handleLogout = () => {
+        localStorage.removeItem( "@TOKEN" )
+        localStorage.removeItem( "@CLIENTID" )
+        navigate( "/LoginClient" )
+        setClient( null )
+    }
+
     return(
         <UserContext.Provider 
             value={{
                 client,
-                loadClient
+                loadClient,
+                handleLogout
             }}
         >
 
