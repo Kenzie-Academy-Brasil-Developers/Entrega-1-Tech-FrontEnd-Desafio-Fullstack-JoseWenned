@@ -1,4 +1,6 @@
 import React from "react";
+import { TLoginFormValues } from "../schemas/formLogin.schema";
+import { TRegisterClients } from "../schemas/formRegisterClient.schema";
 
 export interface IClient {
 
@@ -20,7 +22,8 @@ export interface IUserProviderProps {
 export interface IClientContext {
 
     client: IClient | null
-    loadClient: ( formData: {} ) => Promise<void>
+    loadClient: ( formData: TLoginFormValues ) => Promise<void>
     handleLogout: () => void
+    createClient: ( formData: TRegisterClients ) => Promise<void>
     
 }
