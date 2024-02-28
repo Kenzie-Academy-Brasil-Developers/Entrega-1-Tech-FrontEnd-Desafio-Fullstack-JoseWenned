@@ -71,9 +71,6 @@ export const FormRegisterClient = () => {
                         { ...register( "typeAccount" ) }
                         error={ errors.typeAccount as FieldError | undefined }
                     >
-                        <option value={ "" }>Select type account</option>
-                        <option value={ "accountAdmin" }>Account admin</option>
-                        <option value={ "accountNormal" }>Account normal</option>
                     </Select>
                 
                     <Input 

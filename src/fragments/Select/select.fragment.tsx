@@ -14,7 +14,11 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps >(
                 name={rest.name} 
                 ref={ref} 
                 {...rest} 
-            ></select>
+            >
+               <option value={ "" }>Select type account</option>
+               <option value={ "accountAdmin" }>Account admin</option>
+               <option value={ "accountNormal" }>Account normal</option>
+            </select>
 
             {children}
 
