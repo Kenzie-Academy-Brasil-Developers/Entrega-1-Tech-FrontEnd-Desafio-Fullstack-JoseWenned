@@ -1,9 +1,10 @@
 import React from "react";
+import { TRegisterContacts } from "../schemas/formRegisterContact.schema";
 
 export interface IContact {
 
     id: number
-    name: string
+    full_name: string
     email: string
     telephone: string
     data_register: string
@@ -12,7 +13,8 @@ export interface IContact {
 
 export interface IContactContext {
 
-    contact: IContact | null
+    contact: IContact[]
+    createContact: ( formData: TRegisterContacts ) => Promise<void>
 
 }
 
