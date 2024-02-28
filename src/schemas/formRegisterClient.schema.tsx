@@ -1,5 +1,4 @@
-import { Resolver, ResolverResult } from "react-hook-form";
-import { ZodBoolean, ZodEffects, ZodError, ZodObject, ZodString, ZodType, z } from "zod"
+import { z } from "zod"
 
 export const FormClientRegisterSchema = z.object({
     full_name: z.string()
@@ -23,7 +22,7 @@ export const FormClientRegisterSchema = z.object({
     confirmPassword: z.string().refine((confirmPassword) => confirmPassword.length === 0, {
         message: "Confirm password is required."
     }),
-    typeAccount: z.boolean().refine((admin) => admin === null, {
+    typeAccount: z.string().refine((admin) => admin === "", {
         message: "Admin is required."
     }),
     telephone: z.string()
