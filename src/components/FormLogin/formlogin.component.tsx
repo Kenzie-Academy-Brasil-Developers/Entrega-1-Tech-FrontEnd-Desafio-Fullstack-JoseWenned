@@ -1,7 +1,7 @@
 import { Button } from "../../fragments/Button/button.fragment"
 import { Input } from "../../fragments/Input/input.component"
 import { useContext, useEffect } from "react"
-import { UserContext } from "../../providers/ClientContext/clientContext.context"
+import { UserContext } from "../../providers/ClientContext/ClientContext.context"
 import { useNavigate } from "react-router-dom"
 import { FormLoginSchema, TLoginFormValues, zodResolver } from "../../schemas/formLogin.schema"
 import { FieldError, useForm } from "react-hook-form"

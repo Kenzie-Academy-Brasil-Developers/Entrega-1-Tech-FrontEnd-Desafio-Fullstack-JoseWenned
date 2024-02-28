@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { Header } from "../../components/Header/header.component"
 import { Button } from "../../fragments/Button/button.fragment"
 import { Input } from "../../fragments/Input/input.component"
-import { UserContext } from "../../providers/ClientContext/clientContext.context"
+import { UserContext } from "../../providers/ClientContext/ClientContext.context"
 
 export const ClientAdminPage = () => {
 

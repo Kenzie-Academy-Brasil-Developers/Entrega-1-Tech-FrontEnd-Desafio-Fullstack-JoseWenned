@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { Header } from "../../components/Header/header.component"
 import { Button } from "../../fragments/Button/button.fragment"
-import { UserContext } from "../../providers/ClientContext/clientContext.context"
+import { UserContext } from "../../providers/ClientContext/ClientContext.context"
 
 export const ContactsAllPage = () => {
 
