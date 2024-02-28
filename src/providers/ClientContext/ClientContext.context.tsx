@@ -35,7 +35,7 @@ export const UserProvider = ({ children }: IUserProviderProps) => {
             setClient( data )
 
             setTimeout(() => {
-                navigate( "/LoginClient" )
+                navigate( "/" )
             }, 4000)
 
         }catch( error ){
@@ -59,7 +59,7 @@ export const UserProvider = ({ children }: IUserProviderProps) => {
 
         try{
 
-            const response = await Api.post( "/clients", formData )
+            const response = await Api.post( "/login", formData )
             const { data } = response
 
             localStorage.setItem( "@TOKEN", data.token )
