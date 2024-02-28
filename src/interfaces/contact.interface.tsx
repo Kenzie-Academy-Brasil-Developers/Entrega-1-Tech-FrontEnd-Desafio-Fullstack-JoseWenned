@@ -15,6 +15,7 @@ export interface IContactContext {
 
     contact: IContact[]
     createContact: ( formData: TRegisterContacts ) => Promise<void>
+    readContact: () => void
 
 }
 
