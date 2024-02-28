@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { IContact, IContactContext, IContactProviderProps } from "../../interfaces/contact.interface";
 import { TRegisterContacts } from "../../schemas/formRegisterContact.schema";
 import { Api } from "../../services/services";
@@ -50,13 +50,44 @@ export const ContactProvider = ( { children }: IContactProviderProps ) => {
 
     }
 
+    useEffect(() => {
+
+        const readContact = async () => {
+
+            const token = localStorage.getItem( "@TOKEN" )
+
+            try{
+
+                const { data } = await Api.get( "/contacts", {
+
+                    headers: {
+                        Authorization: `Bearer ${ token }`
+                    }
+
+                } )
+
+                setContact(data.contact)
+
+            }catch( error ){
+
+                return error
+
+            }
+
+        }
+
+        readContact()
+
+    }, [])
+
     return(
 
         <ContactContext.Provider 
             value={{
 
                 contact,
-                createContact
+                createContact,
+                readContact: () => {}
 
             }}
         >
