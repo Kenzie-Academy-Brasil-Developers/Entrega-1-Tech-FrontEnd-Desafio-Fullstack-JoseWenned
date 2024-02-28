@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react"; 
-import { IClientContext, IUserProviderProps } from "../../interfaces/interfaces";
+import { IClientContext, IUserProviderProps } from "../../interfaces/client.interfaces";
 import { Api } from "../../services/services";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom"; 

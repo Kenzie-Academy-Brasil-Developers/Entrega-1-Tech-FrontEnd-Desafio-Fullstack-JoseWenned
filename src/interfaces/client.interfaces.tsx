@@ -8,7 +8,8 @@ export interface IClient {
     name: string
     email: string
     password: string
-    admin: boolean
+    typeAccount: string
+    telephone: string
     data_register: string
 
 }
