@@ -5,7 +5,7 @@ import { TRegisterClients } from "../schemas/formRegisterClient.schema";
 export interface IClient {
 
     id: number
-    name: string
+    full_name: string
     email: string
     password: string
     typeAccount: string

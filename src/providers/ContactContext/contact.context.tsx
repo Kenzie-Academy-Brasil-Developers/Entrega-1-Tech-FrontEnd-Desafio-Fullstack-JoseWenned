@@ -11,8 +11,6 @@ export const ContactProvider = ( { children }: IContactProviderProps ) => {
 
     const [ contact, setContact ] = useState(() => [] as IContact[])
 
-    const navigate = useNavigate()
-
     const createContact = async ( formData: TRegisterContacts ) => {
 
         const token = localStorage.getItem( "@TOKEN" )
@@ -50,14 +48,18 @@ export const ContactProvider = ( { children }: IContactProviderProps ) => {
 
         }
 
-
     }
 
     return(
 
-        <ContactContext.Provider value={{
+        <ContactContext.Provider 
+            value={{
 
-        }}>
+                contact,
+                createContact
+
+            }}
+        >
             { children }
         </ContactContext.Provider>
 
