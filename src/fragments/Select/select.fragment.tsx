@@ -9,12 +9,12 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps >(
          <div>
             {label ? <label htmlFor={rest.name}>{label}</label> : null}
 
-            <Select 
+            <select 
                 id={rest.name} 
                 name={rest.name} 
                 ref={ref} 
                 {...rest} 
-            />
+            ></select>
 
             {children}
 
