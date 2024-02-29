@@ -21,3 +21,5 @@ export const formContactRegisterSchema = z.object({
     }),
     
 })
+
+export type TRegisterContacts = z.infer< typeof  formContactRegisterSchema >

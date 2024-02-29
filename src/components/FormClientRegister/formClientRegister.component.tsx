@@ -2,7 +2,6 @@ import { useContext } from "react"
 import { Button } from "../../fragments/Button/button.fragment"
 import { Input } from "../../fragments/Input/input.component"
 import { UserContext } from "../../providers/ClientContext/ClientContext.context"
-import { useNavigate } from "react-router-dom"
 import { FieldError, useForm } from "react-hook-form"
 import { zodResolver } from "../../schemas/formLogin.schema"
 import { FormClientRegisterSchema, TRegisterClients } from "../../schemas/formRegisterClient.schema"
@@ -72,9 +71,6 @@ export const FormRegisterClient = () => {
                         { ...register( "typeAccount" ) }
                         error={ errors.typeAccount as FieldError | undefined }
                     >
-                        <option value={ "" }>Select type account</option>
-                        <option value={ "accountAdmin" }>Account admin</option>
-                        <option value={ "accountNormal" }>Account normal</option>
                     </Select>
                 
                     <Input 
